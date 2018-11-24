@@ -1,0 +1,64 @@
+
+    
+    <div class="col-md-6 mb-5"  *ngFor="let lab of labs">
+        <div class="lab d-flex"> 
+            <div class="img-lab">
+              <img src="../../../assets/lab-icon.png" alt="" class="img-fluid" width="89">
+            </div>
+            <div class="text-lab">
+              <h3 class="title-lab">{{lab.nome}}</h3>
+              <p class="subtitle-lab">{{lab.exames[0].descricao}}</p>
+              <hr>
+                <div class="end-lab">
+                  
+                  <p class="end"><i class="fas fa-map-marker-alt"></i>{{lab.logradouro}} {{lab.numero}} - {{lab.bairro}} - {{lab.cep}}</p>
+                  <p class="dist">10km</p>
+                            
+                </div>
+            </div>
+            <div class="price-lab">
+              <p class="price"><span>R$</span> {{lab.exames[0].valor}}</p>
+              <p class="desc-price">precos sujeitos a alteracoes, sem aviso previo.</p>
+              <a class="saibamais" (click)="openModal(content)">+ Maiores informacoes</a>
+            </div>
+      
+          </div>
+
+          <!--MOdal-->
+
+          <ng-template #content let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title">{{lab.razaoSocial}}</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="info-lab">
+                        <p><b>Endereco:</b>{{lab.logradouro}}, {{lab.numero}} - {{lab.bairro}} - {{lab.estado/lab.cidade}}, {{lab.cep}}</p>
+                        <p><b>Telefone:</b>{{lab.telefone1}} - {{lab.telefone2}}</p>
+                        <p><b>Email:</b>lab.email</p>
+                        <br>
+                        <p>{{lab.textoInformativo}}</p>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      <div class="img-lab">
+                        <img [src]="lab.fotoLaboratorios" alt="" class="img-fluid">
+                      </div>
+
+                    </div>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-light" (click)="saveFavorite(lab.nome, lab._id)"><i class="fas fa-star"></i>Salvar este laboratorio como favorito</button>
+              </div>
+            </ng-template>
+
+          
+      </div>
+  

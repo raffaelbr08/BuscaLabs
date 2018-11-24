@@ -1,0 +1,82 @@
+.lab{
+    background:white;
+    border-radius:5px;
+    border:1px solid #11cbd7;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding:10px;
+    margin-left:10px;
+
+    .img-lab{
+        flex:1;
+    }
+    .text-lab{
+        margin:0px 25px;
+        flex:5;
+    }
+
+    .end-lab{
+        i{
+            color:#11cbd7;
+        }
+        .end{
+            margin:0;
+        }
+        .dist{
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+    }
+
+    .price-lab{
+        flex:3;
+        color:#11cbd7;
+        .saibamais{            
+            padding:5px;
+            border-radius:5px;
+            font-size:0.8em;
+            font-weight: bold;
+            cursor:pointer;
+        }        
+        .price{
+            span{
+                font-size: 0.6em;
+                font-weight: normal;
+                
+                
+            }
+            font-size:1.5em;
+            font-weight: bold;
+            text-align: center;
+            background:#11cbd7;
+            color:white;
+            border-radius:5px;
+            padding:3px;
+        }
+        .desc-price{
+            font-size:0.7em;
+            color:#1c1c1c;
+        }
+    }
+
+}
+
+
+.modal-footer{
+    
+    button.btn-light{
+        color:white;
+        i{
+            color:yellow!important;
+        }
+        background:#11cbd7;
+
+        &:hover{
+            background:white;
+            color:#11cbd7;
+
+        }
+    }
+}
+
+

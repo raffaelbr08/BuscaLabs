@@ -1,0 +1,228 @@
+.site-hero {
+	background-size: cover;
+	background-position: center center;
+	min-height: 750px;
+    height: 100vh;
+    background-image: url('../../../assets/header-bg.jpg');
+	
+	h1, p {
+		color: white!important;
+		line-height: 1.5;
+	}
+	h1 {
+		font-size: 60px;
+		font-weight: 300;
+		line-height: 1.2;
+		margin-bottom: 30px;
+	}
+	.text {
+		max-width: 500px;
+		margin-bottom: 50px;
+		font-size: 20px;
+		position: relative;
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+	.btn {
+		box-shadow: 0 5px 20px -5px rgba(0,0,0,.2)!important;
+		background: #11cbd7 !important;
+		border: 2px solid transparent!important;
+		color: white;
+		&:hover {			
+			background: none!important;
+			color: white;
+			border: 2px solid white!important;
+			box-shadow: 2 9px 20px -5px rgba(0,0,0,.2)!important;
+		}
+	}
+	.search-submit{	
+		font-size:1.5em;
+
+		&:hover{
+			background: #11cbd7 !important;
+			transition: 1s;
+				
+		}
+	}
+	&.overlay {
+		position: relative;
+		&:before {
+			content: "";
+			background: rgba(0,0,0,.1);
+			width: 100%;
+			z-index: 1;
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+		}
+		
+	}
+	.site-hero-inner {
+		min-height: 750px;
+		height: 100vh;
+	}
+	&.site-sm-hero {
+		min-height: 550px;
+		height: 50vh;
+	}
+	.site-hero-sm-inner {
+		min-height: 550px;
+		height: 50vh;
+	}
+}
+
+
+.block-17 {
+
+	text-align: center;
+	.logo-block{
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+		max-width: 300px;
+		background: white;
+		margin: 0 auto;
+		padding: 10px;
+		margin-bottom: 20px;
+		border-radius: 5px;
+	}
+	.heading {
+		font-size: 40px;
+		color: white;
+    }
+    p{
+        color:white;
+    }
+	form {
+		padding: 20px;
+		background: white;
+		box-shadow: 0 10px 20px -5px rgba(0,0,0,.2);
+		.fields {
+			width: calc(100% - 120px);
+			position: relative;
+			@media(max-width:970px) {
+				width: 100%;
+			}
+			.one-third {
+				width: 33.33333%;
+				border-right: 1px solid lighten(black, 90%);
+				padding-right: 20px;
+				padding-left: 20px;
+				@media(max-width:970px){
+					width: 100%;
+					border-right: none;
+					padding-left: 0px;
+					margin-bottom: 10px;
+				}
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					border-right: none;
+				}
+			}
+			.form-control {
+				box-shadow: none!important;
+				border: none;
+			}
+			.icon {
+				position: absolute;
+				top: 50%;
+				right: 30px;
+				font-size: 14px;
+				transform: translateY(-50%);
+				
+			}
+			.textfield-search, .select-wrap {
+				// width: 50%;
+			}
+			.textfield-search {
+				input {
+
+				}
+			}
+			.select-wrap {
+				position: relative;
+				select {
+					appearance: none;
+				}
+			}
+		}
+		.search-submit {
+			width: 100px;
+			margin-left: 20px;
+			
+		}
+	}
+}
+
+
+// how to work
+
+.howitworks{
+    padding:60px 0px;
+    text-align:center;
+    .container{
+        margin-top:30px;
+        justify-content:space-around;
+    }
+    .bloco-servics{
+        width:300px;
+        text-align: center;
+    }
+}
+
+// download
+
+section.download{
+    background:#11cbd7 !important;
+    color:white;
+    width:100%;
+    height: 481px;
+    .container{
+        align-items: center;
+        justify-content:center;
+    }
+    .download-app{
+        margin-right:300px;       
+        .plataform-select{
+            display: flex;
+            .download-android{
+                margin-right:10px;
+            }
+        }
+    }
+    .email-newllester{
+        margin-top:10px;
+        input{
+            background:transparent;
+            border:1px solid white;
+            &::placeholder{
+                color:white;
+            }
+        }
+        .btn{
+            background:white;
+            border:none;
+            color:#32D7D4;
+        }
+    }
+
+    @media (max-width:1183px){
+        .download-app{   
+                   
+            margin: 0px;
+        }
+    } 
+}
+
+
+@media(max-width:560px){
+    .img-app{
+        display:none;
+    }
+    section.download{
+        padding:60px 0px!important;
+    }
+}
+

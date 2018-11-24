@@ -1,0 +1,102 @@
+
+
+.logo{
+    color:#1c1c1c;
+    font-weight: 100;
+    font-family: 'Lato', sans-serif!important;
+    span{
+        color:#11cbd7 !important;
+        font-weight: bold;
+    }
+}
+
+.header{
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,.2);
+    justify-content: space-around;
+    align-items:center; 
+    
+    .profile{
+        i{
+            font-size:2em;
+            color:#11cbd7 !important;
+        }
+        text-align: center;
+    }
+    
+    form {
+        padding: 20px;
+    
+        .fields {
+            
+            @media(max-width:970px) {
+                width: 100%;
+            }
+            .one-third {
+                border-right: 1px solid lighten(black, 90%);
+                padding-right: 20px;
+                padding-left: 20px;
+                @media(max-width:970px){
+                    width: 100%;
+                    border-right: none;
+                    padding-left: 0px;
+                    margin-bottom: 10px;
+                }
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+            .form-control {
+                box-shadow: none!important;
+                border: none;
+            }
+            .icon {
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                font-size: 14px;
+                transform: translateY(-50%);
+                
+            }
+            .textfield-search, .select-wrap {
+                // width: 50%;
+            }
+            .textfield-search {
+                input {
+
+                }
+            }
+            .select-wrap {
+                position: relative;
+                select {
+                    appearance: none;
+                }
+            }
+        }
+        .search-submit {
+            width: 100px;
+            margin-left: 20px;            
+            
+        }
+        @media(max-width:720px){
+            .search-submit{
+                width:100%;
+                margin:0!important;
+            }
+        }
+        
+    }
+
+}
+
+
+@media(max-width:720px){
+    .header{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}

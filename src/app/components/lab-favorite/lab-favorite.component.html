@@ -1,0 +1,29 @@
+
+    
+    <div class="lab d-flex" *ngFor="let favorite of profileService.userFavorites">
+        <div class="img-lab">
+          <img [src]="favorite.logotipo" alt="" class="img-fluid" width="89">
+        </div>
+        <div class="text-lab">
+          <h3 class="title-lab">{{favorite.nome}}</h3>
+          <h4 class="title-razao">{{favorite.razaoSocial}}</h4>
+          <hr>
+            <div class="end-lab">
+              
+              <p class="end"><i class="fas fa-map-marker-alt"></i> {{favorite.logradouro}}-{{favorite.numero}}, {{favorite.bairro}} - {{favorite.complemento}}, {{favorite.cidade}} - {{favorite.estado}}</p>
+              <p>{{favorite.email}}</p>
+
+                        
+            </div>
+        </div>
+        <div class="price-lab">
+          <p class="title-tel">Telefones:</p>
+          <p class="price">{{favorite.telefone1}}</p>
+          <p class="price">{{favorite.telefone2}}</p>
+
+          <p class="desc-price">{{favorite.textoInformativo}}</p>
+ 
+        </div>
+  
+      </div>
+

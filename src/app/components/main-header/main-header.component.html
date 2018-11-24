@@ -1,0 +1,24 @@
+<header>
+  <div class="header d-flex">
+      <a routerLink="/result">
+      <img src="../../../assets/logo_buscaLabs.png" alt="" class="img-fluid" width="250">
+      </a>
+      <form novalidate #formulario="ngForm" (ngSubmit)="onSearch(formulario)">          
+          <div class="fields d-block d-lg-flex">
+            <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Digite um Exame" ngModel name="exame"></div>
+            <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Escolha uma Região" ngModel name="regiao"></div>  
+            <input type="submit" class="search-submit btn btn-primary" value="Buscar">                      
+          </div>          
+      </form>
+      <div class="singup"  *ngIf="loginservice.exibirLogin">
+        <a routerLink="/login">Login</a> /
+        <a routerLink="/preregister">Cadastrar-se</a>
+      </div>
+      <div class="profile" *ngIf="loginservice.exibirPerfil">
+          <a [routerLink]="['/profile', loginservice.response.object._id]">
+            <i class="fas fa-user-circle"></i>
+            <p class="mb-0">{{loginservice.response.object.nome}}</p>
+          </a>
+      </div>
+  </div>
+</header>
